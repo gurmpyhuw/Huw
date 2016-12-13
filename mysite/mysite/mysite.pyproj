@@ -30,6 +30,9 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="Contact\admin.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="Contact\models.py" />
     <Compile Include="Contact\tests.py" />
     <Compile Include="Contact\views.py" />
