@@ -1,0 +1,19 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    {% if error %}
+    <p style="color: red;">
+        Please submit a search term.
+    </p>
+    {% endif %}
+    <form action="" method="get">
+        <input type="text" name="q" />
+        <input type="submit" value="Search" />
+    </form>
+</body>
+</html>

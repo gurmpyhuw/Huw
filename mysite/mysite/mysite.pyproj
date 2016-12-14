@@ -45,9 +45,12 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Contact\templates\base.html" />
+    <Content Include="Contact\templates\contact_form.html" />
     <Content Include="Contact\templates\current_datetime.html" />
     <Content Include="Contact\templates\hours_ahead.html" />
     <Content Include="Contact\templates\index.html" />
+    <Content Include="Contact\templates\search_form.html" />
+    <Content Include="Contact\templates\search_results.html" />
     <Content Include="requirements.txt" />
   </ItemGroup>
   <ItemGroup>

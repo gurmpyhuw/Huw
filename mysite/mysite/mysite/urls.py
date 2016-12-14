@@ -3,7 +3,7 @@ Definition of urls for mysite.
 """
 
 from django.conf.urls import patterns, include, url
-from Contact.views import hello, home, current_datetime, hours_ahead
+from Contact.views import * 
 # Uncomment the next two lines to enable the admin:
 from django.contrib import admin
 admin.autodiscover()
@@ -19,8 +19,11 @@ urlpatterns = patterns('',
     # Uncomment the next line to enable the admin:
     url(r'^admin/', include(admin.site.urls)),
     
-    url(r'^$', home),
-    url(r'^hello/$', hello),
-    url(r'^time/$', current_datetime),
-    url(r'^time/plus/(\d{1,2})/$', hours_ahead),
+    #url(r'^$', home),
+    #url(r'^hello/$', hello),
+    #url(r'^time/$', current_datetime),
+    #url(r'^time/plus/(\d{1,2})/$', hours_ahead),
+    #url(r'^search-form/$', search_form),
+    url(r'^search/$', search),
+    url(r'^contact/$', contact),
 )
