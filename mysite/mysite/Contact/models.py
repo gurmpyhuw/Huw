@@ -33,28 +33,49 @@ import datetime
 class Title(models.Model):
     Name = models.CharField(max_length = 10)
 
+    def __str__(self):
+        return self.Name 
+
 class Region(models.Model):
     Name = models.CharField(max_length = 4)
     Description = models.CharField(max_length = 25)
 
+    def __str__(self):
+        return self.Name 
+
 class Relationship(models.Model):
     Name = models.CharField(max_length = 25)
+
+    def __str__(self):
+        return self.Name 
 
 class JobTitle(models.Model):
     JobName = models.CharField(max_length = 25)
 
+    def __str__(self):
+        return self.JobName 
+
 class Type(models.Model):
     TypeName = models.CharField(max_length=25)
+    
+    def __str__(self):
+        return self.TypeName 
 
 class Interest(models.Model):
     ShortName = models.CharField(max_length = 3)
     FullName = models.CharField(max_length = 25)
+
+    def __str__(self):
+        return self.ShortName 
 
 class Source(models.Model):
     Type = models.ForeignKey(Type)
     Source = models.CharField(max_length = 50)
     SourceInfo = models.CharField(max_length = 100)
     Interest = models.ForeignKey(Interest)
+
+    def __str__(self):
+        return self.Source 
 
 class Contact(models.Model):
     DtAdded = models.DateField()
@@ -66,3 +87,6 @@ class Contact(models.Model):
     Interests = models.ManyToManyField(Interest)
     Relationship = models.ForeignKey(Relationship)
     JobTitle = models.ForeignKey(JobTitle)
+
+    def __str__(self):
+        return u'%s %s' % (self.FirstName, self.LastName) 
